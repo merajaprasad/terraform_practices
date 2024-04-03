@@ -20,6 +20,8 @@
 3. Terraform Local Vaiable
 
 ### Terraform Modules
+1. create a module
+2. reuse module
 
 ### Tearraform Workspace
 ### Terraform DataSource
