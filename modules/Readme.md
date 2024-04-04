@@ -1,4 +1,6 @@
 # How to reuse modules
+A Terraform module is a set of Terraform configuration files in a single directory. Even a simple configuration consisting of a single directory with one or more .tf files is a module. When you run Terraform commands directly from such a directory, it is considered the root module.
+
 To reuse modules we have to create 3 files
 1. `main.tf`
 2. `variable.tf`
