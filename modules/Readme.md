@@ -1,5 +1,5 @@
-# how to use modules
-To use modules we have to create 3 files
+# How to reuse modules
+To reuse modules we have to create 3 files
 1. `main.tf`
 2. `variable.tf`
 3. `terraform.tfvars`
@@ -8,6 +8,7 @@ To use modules we have to create 3 files
 Note : In `main.tf` file we have to mentioned cloud provider and have to call module by mentioning module source location path. also have to declare all the details of resource name and values as mentioned in modules terraform code.
 
 ```
+
 provider "aws" {
   region = "us-east-1"
 }
@@ -25,9 +26,10 @@ module "ec2_instance" {
 
 
 ### create variable file
-Note : Its importent to create `variable.tf` file and mentioned all the variable names which is mentioned in `main.tf` file
+Note : Its importent to create `variable.tf` file and mentioned all the variable names which will be call through `main.tf` file
 
 ```
+
 variable "ami_id" {
   description = "ami_id value"
 }
@@ -39,15 +41,14 @@ variable "instance_type" {
 variable "tag_name" {
   description = "tag_name value"
 }
-
 ```
 
 ### create terraform.tfvars file
 Note: create `terraform.tfvars` file and pass all the variables values as per your requirement. this values will be call through `variable.tf` file and variable.tf file will pass this values again to `main.tf` file to create resources.
 
 ```
+
 ami_id = "ami-033a1ebf088e56e81"
 instance_type = "t2.micro"
 tag_name      = "tf-instance"
-
 ```
