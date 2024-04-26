@@ -16,19 +16,34 @@ resource "aws_iam_role" "example" {
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 }
 
-# Cluster Provision
 resource "aws_iam_role_policy_attachment" "example-AmazonEKSClusterPolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
   role       = aws_iam_role.example.name
 }
 
 
+# Get VPC data
+data "aws_vpc" "default" {
+    default = true
+}
+
+# Get Public subnet for cluster
+data "aws_subnets" "public" {
+  filter {
+    name = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
+}
+
+
+
+# Cluster provision
 resource "aws_eks_cluster" "example" {
-  name     = "example"
+  name     = "Eks-Cloud"
   role_arn = aws_iam_role.example.arn
 
   vpc_config {
-    subnet_ids = [aws_subnet.example1.id, aws_subnet.example2.id]
+    subnet_ids = data.aws_subnets.public.ids
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
