@@ -49,6 +49,8 @@ Default output format [None]: json
 ## Varify AWS credintials
 run ` aws sts get-caller-identity ` on terminal
 
+---
+
 
 
 
