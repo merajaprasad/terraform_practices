@@ -1,4 +1,4 @@
-# how to use modules
+## How to use modules
 To use modules we have to create 3 files
 1. `main.tf`
 2. `variable.tf`

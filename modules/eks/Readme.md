@@ -5,6 +5,7 @@
 ### 3. Install Kubectl
 ### 4. IAM Role
 
+This Cluster and Node-group is created inside default VPC
 
 ### Cluster Creation
 1. Create IAM Role for Cluster
