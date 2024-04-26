@@ -36,7 +36,7 @@
 Note : its importent to configure aws credintial with local system or github codespace then your crediantials will not be compromised
 
 - install awscli
-run `aws configure` on your terminal
+- run `aws configure` on your terminal
 
 enter the details as mentioned below
 ```bash
@@ -45,6 +45,9 @@ AWS Secret Access Key : <your-secret-access-key-id>
 Default region name [None]: <your-region-name>
 Default output format [None]: json
 ```
+
+## Varify AWS credintials
+run ` aws sts get-caller-identity ` on terminal
 
 
 
