@@ -1,5 +1,5 @@
 # Terraform Workspace
-A workspace in Terraform is a way to organize and manage multiple environments for deploying and managing infrastructure. It allows you to keep your state separate for each environment, such as development, staging, and production, so that changes made to one environment do not affect others.
+A workspace in Terraform is a way to organize and manage multiple environments for deploying and managing infrastructure. It allows you to keep your state separate for each environment, such as development, staging, and production, so that changes made to one environment do not affect others. By default, Terraform operates in a single workspace called `default`, but you can create and switch between different workspaces to maintain separate states for different environments.
 
 ### workspace commands
 
