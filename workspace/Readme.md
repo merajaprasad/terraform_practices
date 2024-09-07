@@ -3,7 +3,7 @@ A workspace in Terraform is a way to organize and manage multiple environments f
 
 ### workspace commands
 
-### - list workspace
+#### - list workspace
    `terraform workspace list`
 #### - create workspace
    `terraform workspace new <workspace-name>`
@@ -11,7 +11,7 @@ A workspace in Terraform is a way to organize and manage multiple environments f
    `terraform workspace select <workspace-name>`
 #### - show workspace
    `terraform workspace show`
-### - delete workspace
+#### - delete workspace
    `terraform workspace delete <workspace-name>`
 #### - apply perticular tfvars file
    `terraform apply -var-file=stage.tfvars`
