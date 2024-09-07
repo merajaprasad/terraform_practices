@@ -24,6 +24,8 @@
 2. reuse/call module
 
 ### Tearraform Workspace
+Terraform workspace is a feature that allows you to manage multiple environments (like development, staging, production) within the same Terraform configuration. By default, Terraform operates in a single workspace called `default`, but you can create and switch between different workspaces to maintain separate states for different environments.
+
 1. create workspace
 2. practice workspace
 
