@@ -1,12 +1,13 @@
 # Terraform Commands
 - Terraform provider
 - terraform init
+- terraform init -reconfigure
+- terraform fmt
 - terraform validate
 - terraform plan
 - terraform apply
 - terraform apply -auto-approve
 - terraform destroy
-- terraform fmt
 - terraform show / terraform show -json
 - terraform output
 - terraform refresh
